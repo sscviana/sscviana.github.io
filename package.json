@@ -1,0 +1,12 @@
+{
+    "name": "Web-proativo",
+    "version": "1.0.0",
+    "description": "Para anunciar o Senhor Jesus",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "node": "^14.17.6"
+    }
+  }
+  
