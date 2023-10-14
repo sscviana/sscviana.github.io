@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartões</title>
+
+</head>
+<body>
+<h1>HTML5 Canvas</h1>
+<h2>The createLinearGradient() Method</h2>
+
+<canvas id="myCanvas" width="50%" height="50%" style="border:1px solid grey"></canvas>
+
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+
+// Create Gradient
+const my_gradient = ctx.createLinearGradient(0, 0, 70, 160);
+my_gradient.addColorStop(0, "black");
+my_gradient.addColorStop(0.7, "red");
+my_gradient.addColorStop(1, "white");
+
+// Fill Rectangle
+ctx.fillStyle = my_gradient;
+ctx.fillRect(20, 20, 150, 100);
+</script>
+
+</body>
+</html>
