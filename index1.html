@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+
+<body>
+    <div class="w3-container">
+        <table style="width: 100%;">
+            <tr>
+                <td id="idd">
+                    <p>Dados</p>
+                </td>
+                <td id="idr">
+                    <p>Resultado</p>
+                </td>
+            </tr>
+            <tr>
+                <td id="iddados">
+                    <div class="w3-card-4" style="padding: 5px; margin-left: 10px;">
+                        <p>Dados para o Cartão Maratona AVVD</p>
+                        <p><label>Largura (px)</label>
+                            <input class="w3-input w3-border" name="largura" type="text" id="idlargura"
+                                placeholder="350">
+                        </p>
+
+                        <p><label>Altura (px)</label>
+                            <input class="w3-input w3-border" name="altura" type="text" id="idaltura" placeholder="550">
+                        </p>
+                        <p><label>Mensagem</label>
+                        <p> <textarea name="mensagem" id="idmensagem" cols="22" rows="10"
+                                placeholder="Mensagem"></textarea>
+                        <p><label>Data da Mensagem</label>
+                            <input class="w3-input w3-border" name="dtmensagem" type="text" id="iddtmensagem">
+                        </p>
+
+                    </div>
+                </td>
+                <td id="idcartao">
+                    <svg id="svgcartao" width="503" height="583">
+                        <rect id="idrec1" x="3" y="3" />
+                        Sorry, your browser does not support inline SVG.
+                    </svg>
+
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        //varre a página buscando todos as tags inputs
+        let inputs = document.querySelectorAll('input');
+
+
+
+
+        // Verifica qual input perdeu o foco e executa uma mudança no SVG
+        inputs.forEach(function (input) {
+            input.addEventListener('blur', function () {
+                if (this.id == 'idlargura') { 
+                    if( this.value  > '500' && this.value < 200){
+                        alert("Valor de largura deve estar entre 200 e 500.")
+                        return
+                    }
+                    document.getElementById("idrec1").style.width = this.value 
+                }
+                if (this.id == 'idaltura') { 
+                    if( this.value  > '580' && this.value < 300){
+                        alert("Valor de largura deve estar entre 300 e 580.")
+                        return
+                    }
+                    document.getElementById("idrec1").style.height = this.value 
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

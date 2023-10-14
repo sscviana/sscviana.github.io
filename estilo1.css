@@ -1,0 +1,30 @@
+#idados,
+#idcartao {
+    background-color: #fff;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+#idr,#idd {
+text-indent: 10px;
+font-weight: 600;
+}
+
+
+#idr:hover,
+#idd:hover {
+    background-color: gold;
+    display: block;
+    width: 50%;
+
+}
+
+#idrec1 {
+    width: 350px;
+    height: 550px;
+    fill: rgb(154, 238, 242);
+    stroke: rgb(82, 107, 107);
+    stroke-width: 5;
+    fill-opacity: 30;
+    stroke-opacity: 0.9;
+}
